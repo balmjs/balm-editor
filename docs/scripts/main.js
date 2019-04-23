@@ -1,6 +1,6 @@
 import Vue from 'vue';
 import App from '@/views/layouts/app';
-import BalmEditor from '../../src/scripts/index'; // 'balm-editor'
+import BalmEditor from '@src/scripts'; // 'balm-editor'
 
 Vue.config.productionTip = false;
 

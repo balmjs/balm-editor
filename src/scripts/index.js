@@ -1,7 +1,7 @@
 import autoInstall from './config/auto-install';
 import configure from './config/configure';
 
-import UiEditor from './editor';
+import UiEditor from './editor/index.vue';
 
 const version = require('../../package.json').version;
 

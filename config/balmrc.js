@@ -16,10 +16,7 @@ module.exports = {
   scripts: {
     entry: env.useDocs
       ? {
-          mylib: [
-            'vue',
-            'prismjs'
-          ],
+          mylib: ['vue', 'prismjs'],
           app: './docs/scripts/main.js'
         }
       : {
@@ -40,7 +37,8 @@ module.exports = {
     plugins: [new VueLoaderPlugin()],
     alias: {
       vue$: 'vue/dist/vue.esm.js',
-      '@': path.resolve(__dirname, '../docs/scripts')
+      '@': path.resolve(__dirname, '../docs/scripts'),
+      '@src': path.resolve(__dirname, '../src')
     },
     eslint: true,
     options: {
@@ -48,9 +46,7 @@ module.exports = {
         drop_console: false
       }
     },
-    include: env.useDocs
-      ? [path.resolve(__dirname, '../src/scripts')]
-      : []
+    include: env.useDocs ? [path.resolve(__dirname, '../src/scripts')] : []
   },
   cache: env.buildDocs
 };
