@@ -1,0 +1,48 @@
+@import 'material-icons';
+$border: 1px solid #e0e0e0;
+
+.balm-editor {
+  border: $border;
+  &,
+  & * {
+    box-sizing: border-box;
+  }
+  .tools-area {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 50px;
+    border-bottom: $border;
+    padding: 0 1em;
+    i[data-commander] {
+      border-radius: 50%;
+      cursor: pointer;
+    }
+  }
+  .edit-area {
+    padding: 1em;
+    height: 27em;
+    outline: none;
+    position: relative;
+    overflow: auto;
+    overflow: overlay;
+    p {
+      margin: 0;
+    }
+    &::-webkit-scrollbar {
+      position: absolute;
+      width: 6px;
+    }
+    &::-webkit-scrollbar-thumb {
+      background-color: rgba(0, 0, 0, 0.3);
+      border-radius: 3px;
+      cursor: pointer;
+      &:hover {
+        background-color: rgba(0, 0, 0, 0.5);
+      }
+    }
+    &::-webkit-scrollbar-track {
+      background-color: rgba(0, 0, 0, 0.1);
+    }
+  }
+}

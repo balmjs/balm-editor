@@ -2,6 +2,8 @@ const balm = require('balm');
 const balmConfig = require('./config/balmrc');
 const env = require('./config/env');
 
+const gulp = require('gulp');
+
 balm.config = balmConfig;
 
 balm.go(mix => {
@@ -12,3 +14,5 @@ balm.go(mix => {
     //
   }
 });
+
+gulp.watch('src/styles/*', gulp.parallel('balm:sass'));

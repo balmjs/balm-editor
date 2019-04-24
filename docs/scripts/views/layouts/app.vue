@@ -1,7 +1,6 @@
 <template>
   <div class="container">
-    <img :src="logo" alt>
-    <hello></hello>
+    <h3 class="example">Example:</h3>
     <div class="editor"></div>
   </div>
 </template>
